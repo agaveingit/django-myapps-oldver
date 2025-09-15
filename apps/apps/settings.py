@@ -11,7 +11,9 @@ SECRET_KEY = env("SECRET KEY", default="dev-secret")
 
 DEBUG = env.bool("DEBUG", default=True)
 
-ALLOWED_HOSTS = env("ALLOWED_HOST", default=[])
+ALLOWED_HOSTS = env.list("ALLOWED_HOST", default=[])
+
+CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=[])
 
 INSTALLED_APPS = [
     # 'django.contrib.admin',
